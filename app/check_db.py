@@ -4,13 +4,13 @@ import sqlite3
 conn = sqlite3.connect("../indeks.db")
 cursor = conn.cursor()
 
-#Download data
-cursor.execute("SELECT doc_id, path, representation FROM urls_documents")
+# Download data
+cursor.execute("SELECT url_id, path_url, representation FROM urls_documents")
 rows = cursor.fetchall()
 
 print(f"📊 Liczba zindeksowanych dokumentów: {len(rows)}\n")
 
-#Preview documents
+# Preview documents
 for url_id, path_url, representation in rows:
     print(f"📄 URL_ID: {url_id}")
     print(f"📁 Ścieżka_URL: {path_url}")
