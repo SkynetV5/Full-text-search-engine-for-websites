@@ -104,7 +104,7 @@ def search(query_text, db_path, top_n=3):
     return list_probability
 
 
-text = input("Wpisz tekst:")
-# text = "Python jest tak szybki że aż python"
+# text = input("Wpisz tekst:")
+text = "Religia shinto Japonia"
 # tf_dict = prepare_query(text,STOPWORDS)
 search(text, "../indeks.db")
